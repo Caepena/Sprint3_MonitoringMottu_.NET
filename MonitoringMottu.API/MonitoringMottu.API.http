@@ -1,0 +1,6 @@
+@MonitoringMottu.API_HostAddress = http://localhost:5183
+
+GET {{MonitoringMottu.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

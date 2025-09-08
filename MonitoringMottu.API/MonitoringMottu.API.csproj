@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <Nullable>enable</Nullable>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Content Include="..\.dockerignore">
+        <Link>.dockerignore</Link>
+      </Content>
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.16" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.8" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.8">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.19" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.8" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.19">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+      <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.7" />
+      <PackageReference Include="Oracle.EntityFrameworkCore" Version="9.23.90" />
+      <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\MonitoringMottu.Infrastructure\MonitoringMottu.Infrastructure.csproj" />
+    </ItemGroup>
+
+</Project>
