@@ -53,6 +53,7 @@ namespace MonitoringMottu.API
             // Registrar repositório genérico para todas as entidades
             builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
             builder.Services.AddScoped<IMotoRepository, MotoRepository>();
+            builder.Services.AddScoped<IGaragemRepository, GaragemRepository>();
 
             var app = builder.Build();
 

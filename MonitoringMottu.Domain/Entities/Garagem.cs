@@ -16,5 +16,14 @@
             Capacidade = capacidade;
             Responsavel = responsavel;
         }
+        
+        public void Refresh(string endereco, int capacidade, string responsavel)
+        {
+            Endereco = endereco;
+            Capacidade = capacidade;
+            Responsavel = responsavel;
+        }
+        
+        public record GaragemResponse(Guid Id, string Endereco, int Capacidade, string Responsavel);
     }
 }

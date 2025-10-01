@@ -34,7 +34,7 @@ namespace MonitoringMottu.API.Controllers
 
         // GET: api/Moto/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Moto>> GetMoto(Guid id)
+        public async Task<IActionResult> GetMoto(Guid id)
         {
             var moto = await _motoRepository.GetByIdAsync(id);
             if (moto == null)
