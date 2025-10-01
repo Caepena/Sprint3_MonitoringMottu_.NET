@@ -2,7 +2,7 @@
 using MonitoringMottu.Domain.Interfaces;
 using MonitoringMottu.Infrastructure.Context;
 
-namespace CP2.Infrastructure.Persistence.Repositories
+namespace MonitoringMottu.Infrastructure.Repositories
 {
     public class Repository<T> : IRepository<T> where T : class
     {
@@ -13,6 +13,11 @@ namespace CP2.Infrastructure.Persistence.Repositories
         {
             _context = context;
             _dbSet = context.Set<T>();
+        }
+
+        public async Task SaveChangesAsync()
+        {
+            await _context.SaveChangesAsync();
         }
 
         public async Task<T> GetByIdAsync(Guid id)

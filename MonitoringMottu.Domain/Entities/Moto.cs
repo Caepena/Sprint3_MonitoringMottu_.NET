@@ -9,17 +9,27 @@
         public string Placa { get; private set; }
         public StatusMoto StatusMoto { get; private set; }
 
-        public Guid Garagemid { get; set; }
+        public Guid GaragemId { get; set; }
         public Garagem? Garagem { get; set; }
 
-        public Moto(string modelo, string marca, string cor, string placa, StatusMoto statusMoto, Guid garagemid)
+        public Moto(string modelo, string marca, string cor, string placa, Guid garagemId)
         {
             Modelo = modelo;
             Marca = marca;
             Cor = cor;
             Placa = placa;
-            StatusMoto = statusMoto;
-            Garagemid = garagemid;
+            StatusMoto = StatusMoto.Disponivel;
+            GaragemId = garagemId;
         }
+
+        public void Refresh(string modelo, string marca, string cor, string placa)
+        {
+            Modelo = modelo;
+            Marca = marca;
+            Cor = cor;
+            Placa = placa;
+        }
+        
+        public record MotoResponse(Guid Id, string Modelo, string Marca, string Cor, string Placa, string StatusMoto, Guid Garagemid);
     }
 }

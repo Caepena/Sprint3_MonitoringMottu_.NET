@@ -1,6 +1,5 @@
 ﻿using System.Reflection;
 using System.Text.Json.Serialization;
-using CP2.Infrastructure.Persistence.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -9,6 +8,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using MonitoringMottu.Domain.Interfaces;
 using MonitoringMottu.Infrastructure.Context;
+using MonitoringMottu.Infrastructure.Repositories;
 
 namespace MonitoringMottu.API
 {
@@ -52,6 +52,7 @@ namespace MonitoringMottu.API
 
             // Registrar repositório genérico para todas as entidades
             builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+            builder.Services.AddScoped<IMotoRepository, MotoRepository>();
 
             var app = builder.Build();
 

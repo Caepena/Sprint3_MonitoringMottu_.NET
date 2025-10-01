@@ -12,7 +12,7 @@ using Oracle.EntityFrameworkCore.Metadata;
 namespace MonitoringMottu.Infrastructure.Migrations
 {
     [DbContext(typeof(MonitoringMottuContext))]
-    [Migration("20250908020512_Initial")]
+    [Migration("20251001174903_Initial")]
     partial class Initial
     {
         /// <inheritdoc />

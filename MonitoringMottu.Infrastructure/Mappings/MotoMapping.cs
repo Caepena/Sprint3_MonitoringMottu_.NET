@@ -15,7 +15,7 @@ namespace CP2.Infrastructure.Mappings
                 .IsRequired()
                 .HasColumnName("ID");
             
-            builder.Property(moto => moto.Garagemid)
+            builder.Property(moto => moto.GaragemId)
                 .HasColumnName("IdGaragem")
                 .IsRequired()
                 .HasColumnType("RAW(16)");
@@ -48,7 +48,7 @@ namespace CP2.Infrastructure.Mappings
             
             builder.HasOne(m => m.Garagem)
                 .WithMany(g => g.Motos)
-                .HasForeignKey(m => m.Garagemid)
+                .HasForeignKey(m => m.GaragemId)
                 .OnDelete(DeleteBehavior.SetNull);
         }
     }

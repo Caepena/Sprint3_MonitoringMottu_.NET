@@ -35,7 +35,7 @@ namespace MonitoringMottu.Infrastructure.Migrations
                     COR = table.Column<string>(type: "NVARCHAR2(10)", maxLength: 10, nullable: false),
                     PLACA = table.Column<string>(type: "NVARCHAR2(7)", maxLength: 7, nullable: false),
                     STATUS = table.Column<string>(type: "NVARCHAR2(15)", maxLength: 15, nullable: false),
-                    IdGaragem = table.Column<Guid>(type: "RAW(16)", nullable: false)
+                    IdGaragem = table.Column<Guid>(type: "RAW(16)", nullable: true)
                 },
                 constraints: table =>
                 {
