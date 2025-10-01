@@ -1,4 +1,4 @@
-# CP4 - Sistema de Gestão de Motos e Garagens
+# Sprint 3 - Sistema de Gestão de Motos e Garagens
 
 Este é um projeto em .NET 8 que implementa uma API RESTful para gerenciamento de motos e garagens. Utiliza Entity Framework Core com banco Oracle, estruturado em camadas e baseado em boas práticas de desenvolvimento orientado a objetos.
 
